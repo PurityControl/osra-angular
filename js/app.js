@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
   var orphans = [
   {
     osra_number: 190003,
