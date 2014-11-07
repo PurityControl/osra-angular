@@ -8,9 +8,30 @@
 <body>
   <h1> OSRA <h1>
   <div ng-controller="OrphanController as orphanCtrl">
-    <div ng-repeat="orphan in orphanCtrl.orphans">
-      <p> {{orphan.full_name}} </p>
-    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Osra #</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Status</th>
+          <th>Priority</th>
+          <th>Mother Alive</th>
+          <th>Sponsorship</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="orphan in orphanCtrl.orphans">
+          <td> {{orphan.osra_number}} </td>
+          <td> {{orphan.full_name}} </td>
+          <td> {{orphan.gender}} </td>
+          <td> {{orphan.status}} </td>
+          <td> {{orphan.priority}} </td>
+          <td> {{orphan.mother_alive}} </td>
+          <td> {{orphan.sponsorship}} </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
