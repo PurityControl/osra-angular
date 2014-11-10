@@ -34,6 +34,40 @@
 	  </tr>
 	</tbody>
       </table>
+        <form name="orphanForm">
+          <h4>Add an Orphan</h4>
+          <fieldset class="form-group">
+            <input type="text" class="form-control" placeholder="Orphan Name" title="Name" />
+          </fieldset>
+          <fieldset class="form-group">
+	    <select class="form-control" ng-options="gender for gender in ['Male', 'Female']"  title="Gender">
+              <option value="">Gender</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+	    <select class="form-control" ng-options="status for status in ['Active', 'Inactive']"  title="Status">
+              <option value="">Status</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+	    <select class="form-control" ng-options="priority for priority in ['Normal', 'High']"  title="Priority">
+              <option value="">Priority</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+	    <select class="form-control" ng-options="mother_alive for mother_alive in ['Yes', 'No']"  title="Mother Alive">
+              <option value="">Mother Alive</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+	    <select class="form-control" ng-options="sponsorship for sponsorship in ['Sponsored', 'Unsponsored']"  title="Sponsorship">
+              <option value="">Sponsorship</option>
+            </select>
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+          </fieldset>
+        </form>
     </div>
   </div>
 </body>
