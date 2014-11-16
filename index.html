@@ -34,34 +34,29 @@
 	  </tr>
 	</tbody>
       </table>
-        <form name="orphanForm">
+        <form name="orphanForm" ng-submit="orphanCtrl.addOrphan(orphan)">
           <h4>Add an Orphan</h4>
           <fieldset class="form-group">
-            <input type="text" class="form-control" placeholder="Orphan Name" title="Name" />
+            <input type="text" class="form-control" placeholder="Orphan Name" title="Name" ng-model="orphan.full_name" />
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-options="gender for gender in ['Male', 'Female']"  title="Gender">
-              <option value="">Gender</option>
+	    <select class="form-control" ng-model="orphan.gender" ng-options="gender for gender in orphanCtrl.genders"  title="Gender">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-options="status for status in ['Active', 'Inactive']"  title="Status">
-              <option value="">Status</option>
+	    <select class="form-control" ng-model="orphan.status" ng-options="status for status in orphanCtrl.statuses"  title="Status">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-options="priority for priority in ['Normal', 'High']"  title="Priority">
-              <option value="">Priority</option>
+	    <select class="form-control" ng-model="orphan.priority" ng-options="priority for priority in orphanCtrl.priorities"  title="Priority">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-options="mother_alive for mother_alive in ['Yes', 'No']"  title="Mother Alive">
-              <option value="">Mother Alive</option>
+	    <select class="form-control" ng-model="orphan.mother_alive" ng-options="mother_alive for mother_alive in orphanCtrl.booleans"  title="Mother Alive">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-options="sponsorship for sponsorship in ['Sponsored', 'Unsponsored']"  title="Sponsorship">
-              <option value="">Sponsorship</option>
+	    <select class="form-control" ng-model="orphan.sponsorship" ng-options="sponsorship for sponsorship in orphanCtrl.sponsorships"  title="Sponsorship">
             </select>
           </fieldset>
           <fieldset class="form-group">

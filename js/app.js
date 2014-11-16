@@ -32,5 +32,15 @@
   var app = angular.module('OsraApp', []);
   app.controller('OrphanController', function() {
     this.orphans = orphans;
+    this.orphan = {};
+    this.genders = ['Male', 'Female'];
+    this.statuses = ['Active', 'Inactive'];
+    this.priorities = ['Normal', 'High'];
+    this.booleans = ['Yes', 'No'];
+    this.sponsorships = ['Sponsored', 'Unsponsored'];
+    this.addOrphan = function(orphan) {
+      orphans.push(orphan);
+      this.orphan = {};
+    };
   });
 })();
