@@ -34,29 +34,35 @@
 	  </tr>
 	</tbody>
       </table>
-        <form name="orphanForm" ng-submit="orphanCtrl.addOrphan(orphan)">
-          <h4>Add an Orphan</h4>
+        <h4>Add an Orphan</h4>
+        <form name="orphanForm" role="form" ng-submit="orphanCtrl.addOrphan(orphan)">
           <fieldset class="form-group">
-            <input type="text" class="form-control" placeholder="Orphan Name" title="Name" ng-model="orphan.full_name" />
+            <label for="input_orphan_name">Full Name</label>
+            <input type="text" class="form-control" id="input_orphan_name" placeholder="Enter Orphan Name" title="Name" ng-model="orphan.full_name" />
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-model="orphan.gender" ng-options="gender for gender in orphanCtrl.genders"  title="Gender">
+            <label for="input_orphan_gender">Gender</label>
+	    <select class="form-control" id="input_orphan_gender" ng-model="orphan.gender" ng-options="gender for gender in orphanCtrl.genders" title="Gender">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-model="orphan.status" ng-options="status for status in orphanCtrl.statuses"  title="Status">
+            <label for="input_orphan_status">Status</label>
+	    <select class="form-control" id="input_orphan_status" ng-model="orphan.status" ng-options="status for status in orphanCtrl.statuses"  title="Status">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-model="orphan.priority" ng-options="priority for priority in orphanCtrl.priorities"  title="Priority">
+            <label for="input_orphan_priority">Priority</label>
+	    <select class="form-control" id="input_orphan_priority" ng-model="orphan.priority" ng-options="priority for priority in orphanCtrl.priorities"  title="Priority">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-model="orphan.mother_alive" ng-options="mother_alive for mother_alive in orphanCtrl.booleans"  title="Mother Alive">
+            <label for="input_orphan_mother_alive">Mother Alive ?</label>
+	    <select class="form-control" id="input_orphan_mother_alive" ng-model="orphan.mother_alive" ng-options="mother_alive for mother_alive in orphanCtrl.booleans"  title="Mother Alive">
             </select>
           </fieldset>
           <fieldset class="form-group">
-	    <select class="form-control" ng-model="orphan.sponsorship" ng-options="sponsorship for sponsorship in orphanCtrl.sponsorships"  title="Sponsorship">
+            <label for="input_orphan_sponsorship">Sponsorship Status</label>
+	    <select class="form-control" id="input_orphan_sponsorship" ng-model="orphan.sponsorship" ng-options="sponsorship for sponsorship in orphanCtrl.sponsorships"  title="Sponsorship">
             </select>
           </fieldset>
           <fieldset class="form-group">
