@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Check table headers</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Check table headers</td></tr>
+</thead><tbody>
+<tr>
+	<td>assertText</td>
+	<td>css=th</td>
+	<td>Osra #</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[2]</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[3]</td>
+	<td>Gender</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[4]</td>
+	<td>Status</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[5]</td>
+	<td>Priority</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[6]</td>
+	<td>Mother Alive</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[7]</td>
+	<td>Sponsorship</td>
+</tr>
+</tbody></table>
+</body>
+</html>
