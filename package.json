@@ -1,0 +1,16 @@
+{
+  "name": "angular-automation",
+  "version": "0.0.0",
+  "description": "a test environment to get gulpjs working with angular-osra",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Craig Ferry",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-util": "~3.0.1",
+    "gulp-connect": "~2.2.0"
+  }
+}
