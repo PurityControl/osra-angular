@@ -5,74 +5,14 @@
   <script type="text/javascript" src="vendor/angular.js"></script>
   <script type="text/javascript" src="vendor/angular-route.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/routes.js"></script>
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap.min.css" />
 </head>
 <body>
   <div class="container">
     <div ng-include src="'views/nav.html'"></div>
+    <div ng-view> </div>
     <h1> OSRA </h1>
-    <div ng-controller="OrphanController as orphanCtrl">
-      <table class="table">
-	<thead>
-	  <tr>
-	    <th>Osra #</th>
-	    <th>Name</th>
-	    <th>Gender</th>
-	    <th>Status</th>
-	    <th>Priority</th>
-	    <th>Mother Alive</th>
-	    <th>Sponsorship</th>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr ng-repeat="orphan in orphanCtrl.orphans">
-	    <td> {{orphan.osra_number}} </td>
-	    <td> {{orphan.full_name}} </td>
-	    <td> {{orphan.gender}} </td>
-	    <td> {{orphan.status}} </td>
-	    <td> {{orphan.priority}} </td>
-	    <td> {{orphan.mother_alive}} </td>
-	    <td> {{orphan.sponsorship}} </td>
-	  </tr>
-	</tbody>
-      </table>
-        <h4>Add an Orphan</h4>
-        <form name="orphanForm" role="form" ng-submit="orphanCtrl.addOrphan(orphanCtrl.orphan)">
-          <fieldset class="form-group">
-            <label for="input_orphan_name">Full Name</label>
-            <input type="text" class="form-control" id="input_orphan_name"
-            placeholder="Enter Orphan Name" title="Name" ng-model="orphanCtrl.orphan.full_name" />
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="input_orphan_gender">Gender</label>
-	    <select class="form-control" id="input_orphan_gender" ng-model="orphanCtrl.orphan.gender" ng-options="gender for gender in orphanCtrl.genders" title="Gender">
-            </select>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="input_orphan_status">Status</label>
-	    <select class="form-control" id="input_orphan_status" ng-model="orphanCtrl.orphan.status" ng-options="status for status in orphanCtrl.statuses"  title="Status">
-            </select>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="input_orphan_priority">Priority</label>
-	    <select class="form-control" id="input_orphan_priority" ng-model="orphanCtrl.orphan.priority" ng-options="priority for priority in orphanCtrl.priorities"  title="Priority">
-            </select>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="input_orphan_mother_alive">Mother Alive ?</label>
-	    <select class="form-control" id="input_orphan_mother_alive" ng-model="orphanCtrl.orphan.mother_alive" ng-options="mother_alive for mother_alive in orphanCtrl.booleans"  title="Mother Alive">
-            </select>
-          </fieldset>
-          <fieldset class="form-group">
-            <label for="input_orphan_sponsorship">Sponsorship Status</label>
-	    <select class="form-control" id="input_orphan_sponsorship" ng-model="orphanCtrl.orphan.sponsorship" ng-options="sponsorship for sponsorship in orphanCtrl.sponsorships"  title="Sponsorship">
-            </select>
-          </fieldset>
-          <fieldset class="form-group">
-            <input type="submit" class="btn btn-primary pull-right" value="Submit Orphan" />
-          </fieldset>
-        </form>
-    </div>
   </div>
 </body>
 </html>

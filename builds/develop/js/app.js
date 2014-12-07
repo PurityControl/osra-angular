@@ -29,7 +29,7 @@
     sponsorship: "Unsponsored"
   }
   ];
-  var app = angular.module('OsraApp', []);
+  var app = angular.module('OsraApp', ['OsraRoutes']);
   app.controller('OrphanController', function() {
     this.orphans = orphans;
     this.orphan = {};
