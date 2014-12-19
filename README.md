@@ -7,7 +7,10 @@ Dependencies
 ============
 - Nodejs
 - npm
-- gulp `npm -g install gulp # this may require sudo`
+- global npm installs # this may require sudo
+  - `npm -g install gulp`
+  - `npm -g install gulp-server`
+  - `npm -g install karma-cli`
 
 Running the server
 ==================
